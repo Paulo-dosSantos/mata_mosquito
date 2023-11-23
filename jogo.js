@@ -14,6 +14,14 @@ function ajustarTamanhoPalco(){
 ajustarTamanhoPalco();
  
 function posicaoRandomica(){
+
+	//remover o mosquito anterior, caso exista
+	if(	document.getElementById('mosquito')){
+			document.getElementById('mosquito').remove();
+	}
+
+
+
 	var posicaoX =Math.floor( Math.random() * largura) -90;
 var posicaoY = Math.floor(Math.random() *altura ) -90;
 
@@ -32,7 +40,8 @@ mosquito.className=tamanhoAleatorio() +' '+ ladoAleatorio();
 mosquito.style.left=posicaoX+'px';
 mosquito.style.top=posicaoY+'px';
 mosquito.style.position='absolute';
-document.body.appendChild(mosquito)
+mosquito.id="mosquito"
+document.body.appendChild(mosquito);
 
 }
 
