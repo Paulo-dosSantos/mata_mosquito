@@ -13,11 +13,13 @@ function ajustarTamanhoPalco(){
 }
 ajustarTamanhoPalco();
  
-var posicaoX =Math.floor( Math.random() * largura);
-var posicaoY = Math.floor(Math.random() *altura );
+var posicaoX =Math.floor( Math.random() * largura)-90;
+var posicaoY = Math.floor(Math.random() *altura )-90;
 
 console.log(posicaoX,posicaoY);
 
+posicaoX= posicaoX<0 ? 0 : posicaoX;
+posicaoY= posicaoX<0 ? 0 : posicaoY;
 
 
 
