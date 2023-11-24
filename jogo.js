@@ -5,6 +5,20 @@ var altura=0;
 var largura=0;
 var vidas=1;
 var tempo=10
+var nivel = window.location.search
+nivel=nivel.replace('?','');
+
+var criarMosquitoTempo=1500;
+if(nivel==='normal'){
+	criarMosquitoTempo=1500;
+}
+else if(nivel==='dificil'){
+	criarMosquitoTempo=1000;
+}
+else if(nivel==='chuckNorris'){
+	criarMosquitoTempo=750;
+}
+
 function ajustarTamanhoPalco(){
 	 altura= window.innerHeight;
 	 largura= window.innerWidth;
